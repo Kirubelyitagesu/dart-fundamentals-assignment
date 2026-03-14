@@ -1,0 +1,13 @@
+# Reflection – Mobile Programming Assignment
+
+**QR1. Which concept was hardest to understand: lists and loops, classes and methods, exception handling, or async/await?**  
+The hardest concept for me was **async/await**. At first, I didn’t really understand why we had to use `await` when calling `computeAsync()`. I kept running the program without `await` and was confused why it printed `Instance of 'Future<double>'` instead of the actual result. It took me a while to realize that an asynchronous function returns a Future immediately, and we have to tell Dart to wait for the result using `await`. Once I tried adding `await` and made `main()` async, everything started working as expected, and I could see the 1.5-second delay between results. Seeing the pause in the output really helped me understand what async/await does.
+
+**QR2. Look at your Task 1 solution. If you had to change your code to analyze a list of floating-point numbers (List<double>) instead of integers, how many places in your code would need to change?**  
+I would need to change the type of the list itself and the return types of the functions from `int` to `double`. For example, `calculateSum()` and `calculateAverage()` would need to return `double`, and the parameter type in each function would also need to change. This showed me how important it is to think about **data types** when designing functions. Choosing the right type from the start can save a lot of time and prevent bugs later.
+
+**QR3. In Task 2, you simulated a network delay using Future.delayed(). Describe a real Flutter app feature where you would need to actually await a real asynchronous operation.**  
+In a real app, fetching data from an API is a common case. For example, loading weather data from a server would return a Future that resolves to a JSON object or a Dart model class. While the user waits, the UI might show a loading spinner or a progress indicator. Using `await` allows the program to pause execution until the data arrives without freezing the UI, so the user can still interact with other parts of the app.
+
+**QR4. If a colleague asked you: 'Why not just use a single function that takes the operation name as a parameter, rather than writing separate add(), subtract(), multiply(), and divide() methods?'**  
+I would say that both approaches have advantages. Using a single function with the operation name works and can reduce repetition, but it can get messy if the function has too many responsibilities. Writing separate methods keeps each function simple, easier to read, and easier to test individually. It also makes the class more organized and easier to extend in the future.
