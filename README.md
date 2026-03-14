@@ -1,8 +1,8 @@
 # Mobile Programming Assignment
 
 **Name:** Kirubel Yitagesu  
-**Student ID:*ATE/9161/15*  
-**Assignment Title:\*\* Dart Fundamentals Assignment
+**Student ID:**ATE/9161/15\*  
+**Assignment Title:** Dart Fundamentals Assignment
 
 ## Overview
 
